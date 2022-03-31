@@ -1,0 +1,49 @@
+{% extends 'services/base.html' %}
+<!------------------------ MAIN CONTENT ----------------------------->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>{% block title %}Contact{% endblock %}</title>
+</head>
+<body>
+   
+   {% block content %}
+   <section class="contact-section">
+
+      <h1>Contact Us</h1>
+      
+      {% if success %}
+      <h2>Thank you  {{ success }}!</h2>
+      <p>We recieved your email and will get back to you soon.</p>
+      {% endif %}
+
+      <form class="contact-form" action="{% url 'contact' %}" method="POST">
+         {% csrf_token %}
+
+          <input type="text" name="full_name" class="contact-text" placeholder="Your Name" required>
+          <input type="email" name="email" class="contact-text" placeholder="Your Email" required>
+          <input type="text" name="phone" class="contact-text" placeholder="Your Phone" required>
+          <textarea class="contact-text" name="message" placeholder="Your Message" required></textarea>
+          <input type="submit" class="contact-button" value="Send">
+      </form>
+      <div class="wrapper">
+         <div class="theBottom">
+            <div class="bottom">
+               <p>Remember we are just a call away!</p>
+               <p>Reach us at (425) 652-6513</p>
+            </div>
+            <div class="bottom">
+               <p>Email Address:</p>
+               <p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#89;&#68;&#83;&#67;&#108;&#101;&#97;&#110;&#105;&#110;&#103;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;" target="blank">&#89;&#68;&#83;&#67;&#108;&#101;&#97;&#110;&#105;&#110;&#103;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
+            </div>
+            <div class="bottom">
+               <p>We look forward to providing you with excellent quality services</p>
+            </div>
+         </div>
+      </div>
+  </section>
+   
+   {% endblock %}
+</body>
+</html>

@@ -1,0 +1,52 @@
+ {% extends 'services/base.html' %}
+ <!------------------------ MAIN CONTENT ----------------------------->
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+<body>
+    
+    {% block content %}
+    <section class="hero">
+        <div class="hero-text">
+            <h1 class="wrapper">YDS Cleaning Services</h1>
+            <h3 class="wrapper">Our Mission is to form long-lasting relationships through our promise of providing excellent
+                quality services everytime.</h3>
+        </div>
+    </section>
+    <!-------------------------------------- article------------------->
+    <section class="main-cont">
+        <div class="inner-cont">
+            <div class="articles">
+                <article data-aos="flip-up" data-aos-duration="1500">
+                    <img src="{% static 'services/image/happy.png' %}" alt="Smiley Face">
+                    <h3>Customer Satisfaction</h3>
+                    <p>We ensure our customers on doing the job we promised</p>
+                </article>
+                <article data-aos="flip-up" data-aos-duration="1500">
+                    <img src="{% static 'services/image/quality.png' %}" alt="Qaulity">
+                    <h3>Quality Work</h3>
+                    <p>Our regular clients and history of work prove it</p>
+                </article>
+                <article data-aos="flip-up" data-aos-duration="1500">
+                    <img src="{% static 'services/image/bonded.png' %}" alt="bonded">
+                    <h3>Bonded & Insured</h3>
+                    <p>We ensure our customers on proving quality work every time</p>
+                </article>
+            </div>
+            <!-------------------aside last section---------------------------------->
+            <div class="schedule">
+                <aside>
+                    <h2>Schedule a walkthrough today for a free quote</h2>
+                    <h3 class="nav-link"><a href="{% url 'contact' %}">Get Started</a></h3>
+                </aside>
+                <img class="aside-img" src="{% static 'services/image/cleaned.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+    
+    {% endblock %}
+</body>
+</html>

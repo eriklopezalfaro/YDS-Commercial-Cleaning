@@ -1,0 +1,53 @@
+{% extends 'services/base.html' %}
+<!------------------------ MAIN CONTENT ----------------------------->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>{% block title %}About{% endblock %}</title>
+</head>
+<body>
+   
+   {% block content %}
+    <section class="hero hero-title">
+        <div class="hero-text hero-text-title">
+            <h1 class="wrapper">About YDS Commercial Cleaning</h1>
+    </div>
+    </section>
+   <section>
+        <div class="box">
+            <div class="about-cont">
+                <h3>Location:</h3>
+                <p>We are based out of Bellevue but not limited to just Bellevue.</p>
+                <p>We service Seattle, Redmond, Kirkland, Redmond, and any city in between.</p>
+                <!-- but can provide service in seattle etc -->
+                <section class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86094.90263780036!2d-122.22134277963588!3d47.59763352884815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906bcfa3a66041%3A0xbacf5482ead00765!2sBellevue%2C%20WA!5e0!3m2!1sen!2sus!4v1575425553557!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </section>
+                <h3>We are about you</h3>
+                <p>When you work with us we are 100% invested in you and we promise to always provide top tier quality.</p>
+                <h3>10+ years professional industry history</h3>
+                <p>We have a great history of expirience and have extensive professional history with our clients.</p>
+            </div>   
+            <div class="quicklist">
+                <h2>Quick reference to some of our services:</h2>
+                <ul>
+                    <li>Day Porter</li>
+                    <li>Contruction Clean Up</li>
+                    <li>Final Clean</li>
+                    <li>Janitorial Service</li>
+                </ul>
+                <div class="see-more">
+                    <h3 class="nav-link"><a href="{% url 'services' %}">See Services >></a></h3>
+                </div>
+                <!-- <div class="icon">
+                    <a href="https://www.facebook.com/"><img src="{% static 'services/image/twitter.png' %}" alt=""> Facebook</a>
+                    <a href="https://www.yelp.com/"><img src="{% static 'services/image/yelp.png' %}" alt=""> Yelp Reviews</a>
+                </div> -->
+            </div>
+        </div>
+   </section>
+   
+   {% endblock %}
+</body>
+</html>

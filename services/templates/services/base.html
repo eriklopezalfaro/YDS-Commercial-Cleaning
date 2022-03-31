@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YDS Cleaning Services | {% block title %}{% endblock %}</title>
+    <link rel="icon" href="{% static 'services/image/emblem-icon.png' %}">
+    <link rel="stylesheet" href="{% static 'services/css/main.css' %}" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Exo+2|Noto+Sans|Roboto|Roboto+Condensed|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!------------------------ TOP NAV ----------------------------->
+    <header>
+        <div class="wrapper">
+            <div class="above-nav">
+                <p><img src="{% static 'services/image/phone.png' %}" alt="phone-icon">&nbsp;&nbsp;&nbsp;(425) 652-6513</p>
+                <p><img src="{% static 'services/image/email.png' %}" alt="email-icon">&nbsp;&nbsp;&nbsp;<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#89;&#68;&#83;&#67;&#108;&#101;&#97;&#110;&#105;&#110;&#103;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;" target="blank">&#89;&#68;&#83;&#67;&#108;&#101;&#97;&#110;&#105;&#110;&#103;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a></p>
+
+
+            </div>
+    <!------------------------ BOTTOM NAV ----------------------------->    
+            <div class="nav">
+                <a href="{% url 'home' %}" class="logo"><img src="{% static 'services/image/yds-logo.png' %}" alt=""></a>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'services' %}">Services</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+                <div id="menu-btn">
+                    <span class="line one"></span>
+                    <span class="line two"></span>
+                    <span class="line three"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--  -->
+    {% block content %}
+    {% endblock %}
+    <!------------------------ FOOTER ----------------------------->
+    <footer>
+        <div class="wrapper">
+            <p>&copy; 2022 YSD Commercial Cleaning </p>
+        </div>
+    </footer>
+    <script src="{% static 'services/js/app.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
+</body>
+</html>

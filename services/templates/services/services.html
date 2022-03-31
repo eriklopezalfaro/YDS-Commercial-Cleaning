@@ -1,0 +1,37 @@
+{% extends 'services/base.html' %}
+<!------------------------ MAIN CONTENT ----------------------------->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>{% block title %}Sevices{% endblock %}</title>
+</head>
+<body>
+   
+   {% block content %}
+   <section class="hero hero-title">
+      <div class="hero-text hero-text-title">
+         <h1 class="wrapper">Our services</h1>
+      </div>
+   </section>
+   <!-- cards -->
+   <section class="service-card">
+
+
+      {% for service in services %}
+      <div class="section card" data-aos="zoom-in-up"" data-aos-duration="1500">
+         <div class="left">
+            <h2>{{ service.title }}</h2>
+            <p>{{ service.description }}</p>
+         </div>
+         <div class="right">
+            <!-- fixx thissssss look at socdcer.com -->
+            <img src="{{ service.image.url }}" alt="Clean building">
+         </div>
+      </div>
+      {% endfor %}
+
+   </section>
+   {% endblock %}
+</body>
+</html>
