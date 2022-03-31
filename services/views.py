@@ -31,8 +31,8 @@ def contact(request):
         send_mail(
             subject=f'{full_name} sent a message on the YDS website',
             message=msg,
-            # from_email=settings.EMAIL_HOST_USER,
-            # recipient_list=[settings.RECIPIENT_ADDRESS],
+            from_email=settings.EMAIL_HOST_USER,
+            recipient_list=[settings.RECIPIENT_ADDRESS],
         )
 
         return render(request, 'services/contact.html', {'success' : full_name})
