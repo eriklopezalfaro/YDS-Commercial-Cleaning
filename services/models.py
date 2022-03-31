@@ -1,6 +1,3 @@
-from distutils.command.upload import upload
-from pydoc import describe
-from turtle import title
 from django.db import models
 
 # Create your models here.
